@@ -16,7 +16,7 @@ class SongsController < ApplicationController
     @song = Song.new
     @song.title= params[:song][:title]
     @song.genre = Genre.find(params[:song][:genre_id])
-    @song.artist_name = params[:song][:artist]
+    @song.artist_name = params[:song][:artist_name]
     @song.note_contents = params[:song][:notes]
     @song.save
     redirect_to song_path(@song)
